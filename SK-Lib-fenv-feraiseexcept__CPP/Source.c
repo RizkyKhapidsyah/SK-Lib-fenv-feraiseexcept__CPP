@@ -17,7 +17,7 @@ double fn(double x) {  /* some function for which zero is a domain error */
 
 int main() {
 	feclearexcept(FE_ALL_EXCEPT);
-	fn(0.9);
+	fn(0.0);
 
 	if (fetestexcept(FE_INVALID)) {
 		printf("FE_INVALID raised\n");
